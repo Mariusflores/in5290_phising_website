@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(Object.fromEntries(new FormData(form))),
     });
     const out = await res.json();
-    status.textContent = out.ok ? "Posted!" : "Something went wrong.";
+    status.textContent = out.ok ? "Black badge claimed!" : "Something went wrong.";
     if (out.ok) form.reset();
   } catch {
     status.textContent = "Something went wrong.";
